@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro || Liga dos Astronautas</title>
+</head>
+<body>
+    <form>
+        <caption>
+            <h2>Cadastro da Liga de Astronautas</h2>
+        </caption>
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+                        -
+            <label for="password">Senha:</label>
+            <input type="password" minlength="4">
+        </div>
+
+        <div>
+            <label for="date">Data de nascimento:</label>
+            <input type="date" id="date">
+                        -
+            <label for="picture">Foto:</label>
+            <input type="file" id="picture">
+        </div>
+
+        <div>
+            <label for="nac">Nacionalidade:</label>
+            <input list="nacionality" id="nac">
+
+            <datalist id="nacionality">
+                <option value="Russo">
+                <option value="Brasileiro">
+                <option value="Americano">
+            </datalist>
+                        -
+            <label>Gênero:</label>
+            <label for="fem">F</label>
+            <input type="radio" id="fem" name="genders">
+
+            <label for="fem">M</label>
+            <input type="radio" id="masc" name="genders">
+        </div>
+
+        <div>
+            <span>Suas principais qualidades:</span><br>
+            <input type="checkbox" id="qual1" name="qual1" value="Inteligência">
+            <label for="qual1">Inteligência |</label>
+            <input type="checkbox" id="qual2" name="qual2" value="Resiliência">
+            <label for="qual2">Resiliência |</label>
+            <input type="checkbox" id="qual3" name="qual3" value="Preparo Físico">
+            <label for="qual3">Preparo Físico |</label>
+            <input type="checkbox" id="qual4" name="qual4" value="Educação">
+            <label for="qual4">Educação |</label>
+        </div>
+        
+        <div>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Porque você gostaria de ser um astronauta?"></textarea>
+        </div>
+
+        <button>Criar</button>
+    </form>
+</body>
+</html>
