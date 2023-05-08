@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 50px;
+    background-color: #fffafa;
+    width: 70%;
+}
+
+.publicacao {
+    padding: 35px;
+}
+
+span {
+    color:  #008080;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
