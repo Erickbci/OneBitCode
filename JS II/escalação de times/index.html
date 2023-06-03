@@ -11,9 +11,26 @@
     <h1>Escalação</h1>
     <hr>
 
-    <section id="players-list"></section>
+    <section id="players-list">
+        
+            <div>
+                <label for="player-position">Posição:</label>
+                <input id="player-position" type="text">
+            </div>
+            <div>
+                <label for="player-name">Nome:</label>
+                <input id="player-name" type="text">
+            </div>
+            <div>
+                <label for="player-number">Numero:</label>
+                <input id="player-number" type="number">
+            </div>
+            <button onclick="addPlayer()">Novo Jogador</button>
+        
+    </section>
 
-    <button onclick="addPlayer()">Novo Jogador</button>
+    <ul id="team-list"></ul>
+    
     <button onclick="removePlayer()">Remover Jogador</button>
     
 </body>
