@@ -19,3 +19,15 @@ function addPlayer() {
         document.getElementById('player-number').value = ''
     } 
 }
+
+function removePlayer() {
+    const number = document.getElementById('numberToRemove').value
+    const playerToRemove = document.getElementById(`player-${number}`)
+
+    const confirmation = confirm(`Remover o jogador ${playerToRemove.innerText}?`)
+
+    if (confirmation) {
+        playerToRemove.remove()
+        document.getElementById('numberToRemove').value = ''
+    }
+}
