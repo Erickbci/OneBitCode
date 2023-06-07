@@ -20,7 +20,7 @@ const form = document.getElementById('devForm');
 const developers = [];
 let inputRows = 0;
 
-addTechnologyButton.addEventListener('click', (ev) => {
+addTechnologyButton.addEventListener('click', () => {
     const stackInputs = document.getElementById('stackInputs');
 
     const newRow = document.createElement('li');
@@ -45,16 +45,46 @@ addTechnologyButton.addEventListener('click', (ev) => {
     const expRadio3 = createInput(id3, '+5 anos', `techExp-${rowIndex}`, 'radio')
     const expLabel3 = createLabel('+5 anos', id3)
 
-
-
+    const removeRowButton = document.createElement('button');
+    removeRowButton.type = 'button'
+    removeRowButton.innerText = 'Remover'
+    removeRowButton.addEventListener('click', () => {
+        stackInputs.removeChild(newRow);
+    })
     newRow.append(
         techNameLabel,
         techNameInput,
         expLabel,
         expRadio1, expLabel1,
         expRadio2, expLabel2,
-        expRadio3, expLabel3 
+        expRadio3, expLabel3,
+        removeRowButton
     )
 
     stackInputs.appendChild(newRow)
+})
+
+form.addEventListener('submit', (ev) => {
+    ev.preventDefault()
+
+    const fullNameInput = document.getElementById('fullName')
+    const inputRows = document.querySelectorAll('.inputRow')
+
+    let technologies = []
+    inputRows.forEach((row) => {
+        const techName = document.querySelector(`#${row.id} input[name="techName"]`).value
+        const techExp = document.querySelector(`#${row.id} input[type="radio"]:checked`).value
+        technologies.push({ name: techName, exp: techExp })
+    })
+
+    const newDev = { fullName: fullNameInput.value, technologies: technologies}
+    developers.push(newDev)
+    alert('Dev cadastrado com sucesso')
+
+    fullNameInput.value = ''
+    inputRows.forEach((row) => {
+        row.remove()
+    })
+
+    console.log(developers);
 })
