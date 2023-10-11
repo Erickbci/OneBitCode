@@ -9,7 +9,7 @@ document.getElementById('sessionBtn').addEventListener('click', function () {
   document.getElementById('readSesssion').addEventListener('click', function () {
     const info = sessionStorage.getItem('info')
     alert(`A informação salva é: ${info}`)
-  })
+})
 
 // LOCAL STORAGE
 
@@ -22,7 +22,7 @@ document.getElementById('localBtn').addEventListener('click', function () {
   document.getElementById('readLocal').addEventListener('click', function () {
     const t = localStorage.getItem('text')
     alert(`O texto salvo no local storage é: ${t}`)
-  })
+})
 
 // COOKIES
 
@@ -35,9 +35,9 @@ document.getElementById('cookieBtn').addEventListener('click', function () {
     document.cookie = cookie + expiration + path
     input.value = ''
     console.log(document.cookie)
-  })
+})
   
-  document.getElementById('cookie2Btn').addEventListener('click', function () {
+document.getElementById('cookie2Btn').addEventListener('click', function () {
     const input = document.getElementById('cookie2')
     // cookieName=value; expires=UTCStringDate; path=/;
     const cookie = `text= ${input.value};`
@@ -46,4 +46,4 @@ document.getElementById('cookieBtn').addEventListener('click', function () {
     document.cookie = cookie + expiration + path
     input.value = ''
     console.log(document.cookie)
-  })
+})
