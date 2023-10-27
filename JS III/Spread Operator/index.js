@@ -16,6 +16,10 @@ const cidadesClone = [...cidades]
 
 cidadesClone.push('Itaquacetuba')
 
+const cidadesCloneTeste = [...cidades, 'spgr']
+
+console.log(cidades, cidadesCloneTeste);
+
 console.log({ cidades, cidadesCopia, cidadesClone });
 
 const cidadesObj = { ...cidades }
